@@ -13,13 +13,16 @@ class Solution:
             templist = FinRes + x       
         if FinRes == []:
             FinRes = templist
-        if len(lettuce) == 3:
-            for l in reversed(range(len(FinRes))):
-                if len(FinRes[l]) != 3:
-                    FinRes.pop(l)
-        if len(lettuce) == 4:
-            for i in reversed(range(len(FinRes))):
-                if len(FinRes[i]) != 4:
-                    FinRes.pop(i)
+        # if len(lettuce) == 3:
+        #     for l in reversed(range(len(FinRes))):
+        #         if len(FinRes[l]) != 3:
+        #             FinRes.pop(l)
+        # if len(lettuce) == 4:
+        #     for i in reversed(range(len(FinRes))):
+        #         if len(FinRes[i]) != 4:
+        #             FinRes.pop(i)
+        for i in reversed(range(len(FinRes))):
+            if len(FinRes[i]) != len(lettuce):
+                FinRes.pop(i)
 
         return FinRes
