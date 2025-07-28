@@ -1,6 +1,5 @@
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
-        Result = []
         FinRes = []
         templist = []
         lettuce = list(digits)
@@ -16,14 +15,11 @@ class Solution:
             FinRes = templist
         if len(lettuce) == 3:
             for l in reversed(range(len(FinRes))):
-                print(FinRes[l], len(FinRes[l]))
                 if len(FinRes[l]) != 3:
                     FinRes.pop(l)
         if len(lettuce) == 4:
             for i in reversed(range(len(FinRes))):
                 if len(FinRes[i]) != 4:
                     FinRes.pop(i)
-
-        print(templist)
 
         return FinRes
