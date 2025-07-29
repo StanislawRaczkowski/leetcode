@@ -12,7 +12,7 @@ class Solution:
                     right = n - 1
                     while left < right:
                         diff = target - nums[i] - nums[j]
-                        if nums[left] + nums[right] == diff and left != i and right != j and (sorted([nums[i], nums[j], nums[right], nums[left]])) not in solution and left != j and right != i:
+                        if nums[left] + nums[right] == diff and (sorted([nums[i], nums[j], nums[right], nums[left]])) not in solution:
                             solution.append(sorted([nums[i], nums[j], nums[right], nums[left]]))
                             left += 1
                             right -= 1
