@@ -27,5 +27,7 @@ class Solution:
                 righte = mid - 1
         return -1
 
+        #And that's really O(logN) time complexity and O(1) memory!
+
             
         
